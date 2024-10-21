@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7EB7D">
+
+    <!-- Navbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch"
+            android:layout_marginStart="20dp"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore"
+            android:layout_marginStart="20dp"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+
+            android:layout_marginLeft="80dp"
+            android:text="LogIn"
+            android:textColor="#E60025"
+            android:textSize="11sp"
+            android:padding="8dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+
+            android:layout_marginLeft="10dp"
+            android:text="SignUp"
+            android:textColor="#E60025"
+            android:textSize="11sp"
+            android:padding="8dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <!-- Image Section (Left) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp"> <!-- Add padding to avoid clipping -->
+
+            <!-- Image 1 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cake" />
+
+            <!-- Image 2 -->
+
+            <!-- Image 3 -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="263dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pasta" />
+
+            <ImageView
+                android:layout_width="192dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:src="@drawable/macs" />
+        </LinearLayout>
+
+        <!-- Text Section (Right) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search for an idea"
+                android:textColor="#c62157"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What do you want to try next? Think of something you're into, or like and see what you find."
+                android:textColor="#333"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="19dp"
+                android:background="@drawable/rounded_button"
+                android:text="Explore"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:padding="8dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

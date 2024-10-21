@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1d4d8"> <!-- Light pink background -->
+
+    <!-- Image Section (Left) -->
+    <LinearLayout
+        android:id="@+id/imageContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Image Content -->
+        <!-- Replace with actual drawable -->
+        android:maxHeight="100dp"
+        android:layout_gravity="center"
+        android:padding="20dp" />
+
+        <!-- Text Content Section (Right) -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See it, make it, try it, do it"
+                android:textColor="#c04746"
+                android:textSize="36sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The best part of Pinterest is discovering new things and ideas from people around the world."
+                android:textColor="#4e3536"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginBottom="30dp" />
+
+            <!-- Explore Button -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore"
+                android:backgroundTint="#c04746"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
