@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7EB7D">
+    android:background="#F7EB7D"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".homeC">
 
     <!-- Navbar -->
     <LinearLayout
@@ -13,34 +15,34 @@
         android:background="@android:color/white"
         android:elevation="4dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
+        <Button
+            android:id="@+id/watch_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Watch"
             android:layout_marginStart="20dp"
             android:textColor="#333"
             android:textStyle="bold"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:background="@drawable/white_button" /> <!-- Use custom drawable -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Explore"
-            android:layout_marginStart="20dp"
-            android:textColor="#333"
-            android:textStyle="bold"
-            android:textSize="12sp"/>
+<!--        <Button-->
+<!--            android:id="@+id/explore_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Explore"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:textColor="#333"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="12sp"-->
+<!--            android:background="@drawable/white_button2" /> &lt;!&ndash; Use custom drawable &ndash;&gt;-->
+
+
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="70dp"
-            android:layout_height="30dp"
-
-            android:layout_marginLeft="80dp"
+            android:layout_height="48dp"
             android:text="LogIn"
             android:textColor="#E60025"
             android:textSize="11sp"
@@ -50,14 +52,12 @@
         <Button
             android:id="@+id/signup_button"
             android:layout_width="70dp"
-            android:layout_height="30dp"
-
-            android:layout_marginLeft="10dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:padding="8dp"
             android:text="SignUp"
             android:textColor="#E60025"
-            android:textSize="11sp"
-            android:padding="8dp"
-            android:gravity="center" />
+            android:textSize="11sp" />
     </LinearLayout>
 
     <!-- Main Content -->
@@ -73,19 +73,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="16dp"> <!-- Add padding to avoid clipping -->
+            android:padding="16dp">
 
-            <!-- Image 1 -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cake" />
-
-            <!-- Image 2 -->
-
-            <!-- Image 3 -->
 
             <ImageView
                 android:layout_width="match_parent"
@@ -128,6 +123,7 @@
                 android:layout_marginBottom="20dp" />
 
             <Button
+                android:id="@+id/explore_button"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

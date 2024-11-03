@@ -12,18 +12,14 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <!-- Image Content -->
-        <!-- Replace with actual drawable -->
-        android:maxHeight="100dp"
-        android:layout_gravity="center"
-        android:padding="20dp" />
+
 
         <!-- Text Content Section (Right) -->
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
+            android:scaleType="fitCenter"></ImageView>
 
         <LinearLayout
             android:layout_width="0dp"

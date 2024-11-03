@@ -9,7 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
         android:padding="16dp"
         android:gravity="center"
         android:layout_marginBottom="16dp"
@@ -56,6 +55,7 @@
             android:textSize="24sp"/> <!-- White icon -->
 
         <Button
+
             android:layout_width="66dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#000000"

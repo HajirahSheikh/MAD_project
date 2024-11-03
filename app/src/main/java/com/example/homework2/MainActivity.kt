@@ -1,20 +1,42 @@
 package com.example.homework2
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        // Set up the listener for navigation item selection
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            var selectedFragment: Fragment? = null
+            when (item.itemId) {
+                R.id.nav_home -> selectedFragment = homeC() // Replace with actual fragment
+                R.id.nav_settings -> selectedFragment = settingspageC() // Replace with actual fragment
+                R.id.nav_pin -> selectedFragment = pinpageC() // New PinPageFragment case
+                R.id.nav_search -> selectedFragment = searchpageC()
+
+            }
+            // Load the selected fragment
+            if (selectedFragment != null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, selectedFragment)
+                    .commit()
+            }
+            true
+        }
+
+        // Set the default fragment to Home when the app starts
+        if (savedInstanceState == null) {
+            bottomNavigation.selectedItemId = R.id.nav_home // Default to Home
         }
     }
+
+
 }
